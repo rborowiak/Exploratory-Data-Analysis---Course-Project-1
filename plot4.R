@@ -22,12 +22,12 @@ library(lubridate)
                   c("Year","Emissions"))
     
 ##open PNG device: creates "plot4.png" in working directory  
-  png(filename = "plot4.png", width = 480*1.5, height = 480*1.5, units = "px")
+  png(filename = "plot4.png", width = 480, height = 480, units = "px")
 
   #barplot
   ggplot(emission_sum, aes(x=as.character(Year), y=Emissions/10^6)) + 
     geom_bar(fill=rgb(0.1,0.4,0.5,0.7), stat = "identity") +
-    theme_grey(base_size = 20) +
+    theme_grey(base_size = 15) +
     labs(x = "Years", y = expression("Emissions in mega tons")) +
     labs(title = "Total PM2.5 US-Emissions - Coal Sources") 
 

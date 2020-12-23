@@ -12,7 +12,7 @@ library(lubridate)
   #totalEmissions <- tapply(NEI$Emissions,NEI$year,sum)
   
 ##open PNG device: creates "plot1.png" in working directory  
-  png(filename = "plot1.png", width = 480*1.5, height = 480*1.5, units = "px")
+  png(filename = "plot1.png", width = 480, height = 480, units = "px")
     
   #barplot
   barplot(Emissions/1E06 ~ Year, data=emission_sum, main="Total US PM2.5 Emissions", xlab="Year", 

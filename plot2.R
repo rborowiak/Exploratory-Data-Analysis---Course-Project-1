@@ -14,7 +14,7 @@ library(lubridate)
   emission_sum <- setNames(aggregate(NEI_BC$Emissions, by=list(NEI_BC$year), FUN=sum), c("Year","Emissions"))
   
 ##open PNG device: creates "plot2.png" in working directory  
-  png(filename = "plot2.png", width = 480*1.5, height = 480*1.5, units = "px")
+  png(filename = "plot2.png", width = 480, height = 480, units = "px")
   
   #barplot
   barplot(Emissions ~ Year, data=emission_sum, main="Total PM2.5 Emissions Baltimore City", 
