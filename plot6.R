@@ -16,6 +16,7 @@ library(lubridate)
 
 ##filter data related to Baltimore City and Los Angeles County
   BC_LA_mv <- filter(NEI_SCC_mv, fips %in% c("24510", "06037"))
+  
 ##replace fips code by county name
   BC_LA_mv <- rename(BC_LA_mv, County = fips)
   BC_LA_mv$County <- gsub("24510", "Baltimore City", BC_LA_mv$County)
